@@ -74,7 +74,7 @@ const HeaderTwo = () => {
             <div className="row align-items-center justify-content-between">
               <div className="col-auto">
                 <div className="header-logo">
-                  <Link to="/home-2">
+                  <Link to="/home">
                     <img 
                       src="/assets/New%20folder/Checkit1.png" 
                       alt="Checkit Research" 
@@ -101,7 +101,7 @@ const HeaderTwo = () => {
                         </li>
                         <li>
                           <NavLink
-                            to="/home-2"
+                            to="/home"
                             className={(navData) =>
                               navData.isActive ? "active" : ""
                             }
@@ -336,7 +336,7 @@ const HeaderTwo = () => {
                         </li>
                         <li>
                           <NavLink
-                            to="/home-2"
+                            to="/home"
                             className={(navData) =>
                               navData.isActive ? "active" : ""
                             }

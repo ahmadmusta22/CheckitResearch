@@ -130,7 +130,7 @@ const HeaderOne = () => {
                           </li>
                           <li>
                             <NavLink
-                              to="/home-2"
+                              to="/home"
                               className={(navData) =>
                                 navData.isActive ? "active" : ""
                               }
@@ -407,7 +407,7 @@ const HeaderOne = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/home-2"
+                        to="/home"
                         className={(navData) =>
                           navData.isActive ? "active" : ""
                         }
