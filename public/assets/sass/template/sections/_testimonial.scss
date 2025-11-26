@@ -1,0 +1,258 @@
+/* Testimonial 1 ---------------------------------- */
+.testimonial-area-1 {
+    padding-top: 145px;
+}
+.testimonial-thumb1 {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    img {
+        object-fit: contain;
+        object-position: bottom;
+    }
+}
+.testi-card {
+    background: #232323;
+    border-radius: 5px;
+    padding: 60px;
+    .testi-profile-title {
+        color: $white-color;
+        font-size: 26px;
+        font-weight: 900;
+        margin-bottom: 5px;
+        margin-top: -0.3em;
+    }
+    .testi-profile-desig {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $title-font;
+        color: $white-color;
+        opacity: 0.7;
+    }
+    .testi-card_text {
+        color: $white-color;
+        opacity: 0.7;
+        font-size: 22px;
+        font-weight: 400;
+        font-family: $title-font;
+        margin-bottom: 32px;
+    }
+    .testi-card-profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 23px;
+    }
+    .rating {
+        color: #F8B427;
+        display: flex;
+        gap: 10px;
+    }
+}
+.testi-slider-1 {
+    position: relative;
+    .slick-dots {
+        position: absolute;
+        right: 74px;
+        bottom: 60px;
+        display: inline-block;
+        width: auto;
+    }
+}
+@include xl {
+    .testimonial-area-1 {
+        background-position: right;
+    }
+}
+@include lg {
+    .testi-card .testi-card_text {
+        font-size: 18px;
+    }
+}
+@include md {
+    .testimonial-thumb1 {
+        display: none;
+    }
+}
+@include xs {
+    .testi-card {
+        padding: 40px;
+    }
+}
+
+/* Testimonial 2 ---------------------------------- */
+.testimonial-area-2 {
+    position: relative;
+    z-index: 1;
+}
+.testiomonial-wrap-2 {
+    margin: 60px 0;
+    padding: 80px 70px 50px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+    .quote-icon {
+        position: absolute;
+        right: 55px;
+        top: 80px;
+    }
+    .testi-slider-2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+.testi-card.style2 {
+    background: transparent;
+    padding: 0;
+    .testi-card-profile {
+        justify-content: start;
+        gap: 25px;
+        margin-bottom: 57px;
+    }
+    .testi-profile_thumb {
+        img {
+            border-radius: 50%;
+        }
+    }
+    .testi-card_text {
+        font-size: 26px;
+        opacity: 1;
+        line-height: 36px;
+        margin-bottom: 0;
+    }
+    .testi-feedback-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 50vh;
+        overflow: hidden;
+        img {
+            width: 100%;
+            max-width: 450px;
+            max-height: 50vh;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+@include xl {
+    .testiomonial-wrap-2 {
+        padding: 70px 60px 40px;
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 45vh;
+        img {
+            max-height: 45vh;
+            max-width: 420px;
+        }
+    }
+}
+@include lg {
+    .testiomonial-wrap-2 {
+        padding: 60px 50px 35px;
+    }
+    .testiomonial-wrap-2 .quote-icon {
+        width: 200px;
+        top: 60px;
+    } 
+    .testi-card.style2 .testi-card_text {
+        font-size: 24px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 40vh;
+        img {
+            max-height: 40vh;
+            max-width: 380px;
+        }
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+}
+@include sm {
+    .testiomonial-wrap-2 {
+        padding: 50px 30px 25px;
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .testi-card.style2 .testi-card-profile {
+        margin-bottom: 37px;
+    }
+    .testi-card.style2 .testi-card_text {
+        font-size: 18px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 35vh;
+        img {
+            max-height: 35vh;
+            max-width: 100%;
+        }
+    }
+}
+
+@include vxs {
+    .testiomonial-wrap-2 {
+        padding: 35px 20px 15px;
+    }
+    .testiomonial-wrap-2 .quote-icon {
+        width: 100px;
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+    .testi-card.style2 .testi-card-profile {
+        flex-wrap: wrap;
+        margin-bottom: 17px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 30vh;
+        img {
+            max-height: 30vh;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+@include md {
+    .testiomonial-wrap-2 {
+        padding: 50px 40px 30px;
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 38vh;
+        img {
+            max-height: 38vh;
+            max-width: 350px;
+        }
+    }
+}
+@include xs {
+    .testiomonial-wrap-2 {
+        padding: 40px 25px 20px;
+    }
+    .testiomonial-wrap-2 .testi-slider-2 {
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+    .testi-card.style2 .testi-feedback-image {
+        max-height: 32vh;
+        img {
+            max-height: 32vh;
+            max-width: 100%;
+        }
+    }
+}

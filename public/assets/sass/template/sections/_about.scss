@@ -1,0 +1,551 @@
+/*----------------------------------------------
+    # About Area 1
+----------------------------------------------*/
+.about1-shape-img {
+  opacity: 0.2;
+  left: 120px;
+  .about1-shape-img-2 {
+    margin-left: -35px;
+    margin-bottom: -120px;
+  }
+  @include xxl {
+    left: 42px;
+  }
+}
+.about-thumb1 {
+  position: relative;
+  padding-left: 180px;
+  padding-bottom: 240px;
+  display: inline-block;
+  height: 100%;
+  .about-img-1 {
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    padding: 30px 0 0 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0px 90px 94px 0px;
+      background: $theme-color;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 5px;
+    }
+    img {
+      border: 7px solid $white-color;
+      border-radius: 5px;
+    }
+  }
+  .about-img-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 104px 0px 0px 115px;
+      background: $theme-color;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 5px;
+    }
+    img {
+      border-radius: 5px;
+    }
+  }
+  @include xs {
+    .about-img-1:after {
+      inset: 0px 30px 64px 0px;
+    }
+  }
+  @include vxs {
+    padding-left: 60px;
+    padding-bottom: 200px;
+  }
+}
+.about-year-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 7px;
+  width: 183px;
+  &:after {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    //! background: url(../img/bg/about_counter-border1-1.png);
+    background-size: 100% 100%;
+  }
+  .about-year-mask-wrap {
+    mask-size: 100% 100%;
+    background: $title-color;
+    text-align: center;
+    padding: 30px 19px 60px;
+  }
+  .about-year-wrap-title {
+    font-weight: 900;
+    color: $white-color;
+    margin-top: 7px;
+    margin-bottom: -2px;
+  }
+  .about-year-wrap-text {
+    font-weight: 400;
+    font-family: $title-font;
+    font-size: 18px;
+    color: $white-color;
+    margin-bottom: -0.55em;
+  }
+}
+
+/* About Area 2 ---------------------------------- */
+.about-area-2 {
+  padding-bottom: clamp(60px, 10vw, 120px);
+  
+  @include laptop {
+    padding-bottom: clamp(50px, 8vw, 100px);
+  }
+  
+  @include tablet {
+    padding-bottom: clamp(40px, 7vw, 80px);
+  }
+  
+  @include mobile {
+    padding-bottom: clamp(30px, 6vw, 60px);
+  }
+}
+
+// Ensure proper spacing for About section wrapper
+.about-section-wrapper {
+  margin-bottom: clamp(40px, 6vw, 80px);
+  
+  @include tablet {
+    margin-bottom: clamp(30px, 5vw, 60px);
+  }
+  
+  @include mobile {
+    margin-bottom: clamp(20px, 4vw, 40px);
+  }
+}
+.about-thumb2 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: clamp(30px, 4vw, 40px);
+  min-height: 1px; // Ensure container has height even with absolute children
+  // Add padding-bottom to account for absolutely positioned elements
+  padding-bottom: clamp(80px, 12vw, 120px);
+  
+  @include tablet {
+    padding-bottom: clamp(60px, 10vw, 100px);
+  }
+  
+  @include mobile {
+    padding-bottom: clamp(40px, 8vw, 80px);
+  }
+  
+  @include vxs {
+    padding-bottom: 0; // No padding needed when elements are relative
+  }
+  
+  .about-img-1 {
+    // Fluid padding-left for responsive positioning
+    padding-left: clamp(0px, 20vw, 237px);
+    border-radius: 5px;
+    width: 100%;
+    
+    img {
+      border-radius: 5px;
+      // Fluid width and height
+      width: clamp(100%, 40vw, 471px);
+      max-width: 100%;
+      height: clamp(200px, 25vw, 325px);
+      object-fit: cover;
+      display: block;
+    }
+  }
+  
+  .about-img-2 {
+    border-radius: 5px;
+    margin-top: clamp(8px, 1vw, 12px);
+    width: 100%;
+    
+    img {
+      border-radius: 5px;
+      // Fluid width and height
+      width: clamp(100%, 42vw, 507px);
+      max-width: 100%;
+      height: clamp(180px, 22vw, 277px);
+      object-fit: cover;
+      display: block;
+    }
+  }
+  
+  .about-counter-wrap {
+    background: $theme-color;
+    border-radius: 5px;
+    // Fluid padding
+    padding: clamp(15px, 2.5vw, 30px);
+    display: inline-block;
+    position: absolute;
+    top: clamp(0px, 2vw, 20px);
+    left: clamp(0px, 1.5vw, 20px);
+    z-index: 2;
+    // Fluid width
+    min-width: clamp(120px, 18vw, 200px);
+    max-width: 90%;
+    
+    img {
+      width: clamp(30px, 4vw, 50px);
+      height: auto;
+      display: block;
+      margin-bottom: clamp(8px, 1vw, 12px);
+    }
+    
+    .about-counter {
+      // Fluid typography
+      font-size: clamp(32px, 4.5vw, 50px);
+      font-weight: 900;
+      color: $white-color;
+      margin-bottom: -3px;
+      margin-top: clamp(6px, 0.8vw, 11px);
+      line-height: 1;
+    }
+    
+    .about-counter-text {
+      color: $white-color;
+      // Fluid typography
+      font-size: clamp(14px, 1.6vw, 20px);
+      font-weight: 700;
+      margin-bottom: -0.3em;
+      line-height: 1.2;
+    }
+  }
+  
+  .about-year-wrap2 {
+    background: $white-color;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
+    // Fluid padding
+    padding: clamp(12px, 1.8vw, 15px) clamp(18px, 2.5vw, 28px) clamp(18px, 2.2vw, 25px);
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    position: absolute;
+    right: clamp(10px, 4vw, 50px);
+    bottom: clamp(20px, 5vw, 62px);
+    z-index: 2;
+    // Fluid width
+    min-width: clamp(140px, 20vw, 220px);
+    max-width: 90%;
+    
+    .about-year-grid-wrap {
+      display: flex;
+      gap: clamp(12px, 1.8vw, 20px);
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      .icon {
+        // Fluid icon sizing
+        height: clamp(40px, 4.5vw, 55px);
+        width: clamp(40px, 4.5vw, 55px);
+        line-height: clamp(40px, 4.5vw, 55px);
+        border-radius: 50%;
+        background: $theme-color;
+        flex-shrink: 0;
+        
+        img {
+          width: clamp(20px, 2.5vw, 30px);
+          height: auto;
+        }
+      }
+      
+      .about-counter {
+        // Fluid typography
+        font-size: clamp(32px, 4.5vw, 50px);
+        font-weight: 900;
+        margin-bottom: -0.4em;
+        margin-top: -0.3em;
+        line-height: 1;
+      }
+    }
+    
+    .about-year-text {
+      // Fluid typography
+      font-size: clamp(14px, 1.6vw, 20px);
+      font-weight: 700;
+      margin-bottom: -0.3em;
+      margin-top: clamp(8px, 1vw, 12px);
+      line-height: 1.2;
+    }
+  }
+}
+.about-counter-grid {
+  display: flex;
+  gap: 10px;
+  padding: 30px 20px;
+  background: $white-color;
+}
+.about-content-wrap {
+  width: 100%;
+  padding-top: clamp(20px, 3vw, 40px);
+  margin-bottom: clamp(30px, 4vw, 50px);
+  
+  .title-area {
+    margin-bottom: clamp(20px, 2.5vw, 30px);
+    
+    .sub-title {
+      font-size: clamp(11px, 1.1vw, 14px);
+      margin-bottom: clamp(12px, 1.5vw, 18px);
+    }
+    
+    .sec-title {
+      font-size: clamp(24px, 3.5vw, 42px);
+      line-height: clamp(1.2, 1.25, 1.3);
+      margin-bottom: clamp(15px, 2vw, 25px);
+    }
+    
+    .sec-text {
+      font-size: clamp(14px, 1.3vw, 18px);
+      line-height: clamp(1.5, 1.6, 1.75);
+      margin-top: clamp(12px, 1.5vw, 21px);
+      margin-bottom: clamp(15px, 2vw, 25px);
+    }
+  }
+}
+
+.about-feature-wrap {
+  background: $white-color;
+  border-radius: 5px;
+  // Fluid padding
+  padding: clamp(20px, 3vw, 35px) clamp(20px, 2.5vw, 30px);
+  display: flex;
+  gap: clamp(12px, 1.5vw, 20px);
+  flex-wrap: wrap;
+  
+  &.style-shadow {
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  &:not(:last-child) {
+    margin-bottom: clamp(12px, 1.5vw, 20px);
+  }
+  
+  .icon {
+    flex: none;
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
+    
+    img {
+      transition: 0.4s;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .about-feature-title {
+    // Fluid typography
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 900;
+    margin-bottom: clamp(2px, 0.3vw, 3px);
+    margin-top: -0.3em;
+    line-height: clamp(1.2, 1.25, 1.3);
+  }
+  
+  .about-feature-text {
+    margin-bottom: -0.5em;
+    // Fluid typography
+    font-size: clamp(14px, 1.3vw, 18px);
+    font-weight: 400;
+    font-family: $title-font;
+    line-height: clamp(1.5, 1.6, 1.75);
+  }
+  
+  &:hover {
+    .icon {
+      img {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+// Responsive breakpoints for about-thumb2
+@include xl {
+  .about-thumb2 {
+    .about-img-1 {
+      padding-left: clamp(0px, 18vw, 200px);
+      img {
+        width: clamp(100%, 35vw, 420px);
+        height: clamp(220px, 24vw, 300px);
+      }
+    }
+    .about-img-2 {
+      img {
+        width: clamp(100%, 37vw, 450px);
+        height: clamp(200px, 21vw, 260px);
+      }
+    }
+  }
+}
+
+@include laptop {
+  .about-thumb2 {
+    .about-img-1 {
+      padding-left: clamp(0px, 15vw, 150px);
+      img {
+        width: clamp(100%, 32vw, 380px);
+        height: clamp(210px, 23vw, 280px);
+      }
+    }
+    .about-img-2 {
+      img {
+        width: clamp(100%, 34vw, 400px);
+        height: clamp(190px, 20vw, 240px);
+      }
+    }
+    .about-counter-wrap {
+      left: clamp(0px, 1.2vw, 15px);
+      top: clamp(0px, 1.5vw, 15px);
+    }
+    .about-year-wrap2 {
+      right: clamp(8px, 3vw, 40px);
+      bottom: clamp(15px, 4vw, 50px);
+    }
+  }
+}
+
+@include tablet {
+  .about-thumb2 {
+    .about-img-1 {
+      padding-left: clamp(0px, 12vw, 100px);
+      img {
+        width: clamp(100%, 28vw, 320px);
+        height: clamp(200px, 22vw, 240px);
+      }
+    }
+    .about-img-2 {
+      img {
+        width: clamp(100%, 30vw, 340px);
+        height: clamp(180px, 19vw, 210px);
+      }
+    }
+    .about-counter-wrap {
+      left: clamp(0px, 1vw, 10px);
+      top: clamp(0px, 1.2vw, 10px);
+      min-width: clamp(110px, 16vw, 180px);
+    }
+    .about-year-wrap2 {
+      right: clamp(5px, 2.5vw, 30px);
+      bottom: clamp(12px, 3.5vw, 40px);
+      min-width: clamp(130px, 18vw, 200px);
+    }
+  }
+}
+
+@include mobile {
+  .about-thumb2 {
+    .about-img-1 {
+      padding-left: clamp(0px, 8vw, 60px);
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: clamp(180px, 45vw, 220px);
+      }
+    }
+    .about-img-2 {
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: clamp(160px, 40vw, 190px);
+      }
+    }
+    .about-counter-wrap {
+      left: clamp(0px, 2vw, 10px);
+      top: clamp(0px, 2vw, 10px);
+      min-width: clamp(100px, 30vw, 160px);
+      padding: clamp(12px, 3vw, 20px);
+    }
+    .about-year-wrap2 {
+      right: clamp(5px, 3vw, 20px);
+      bottom: clamp(10px, 4vw, 30px);
+      min-width: clamp(120px, 35vw, 180px);
+      padding: clamp(10px, 2.5vw, 15px) clamp(14px, 3.5vw, 22px) clamp(14px, 3vw, 20px);
+    }
+  }
+}
+
+@include vxs {
+  .about-thumb2 {
+    .about-img-1 {
+      padding-left: 0;
+      img {
+        width: 100%;
+        height: clamp(170px, 50vw, 200px);
+      }
+    }
+    .about-img-2 {
+      img {
+        width: 100%;
+        height: clamp(150px, 45vw, 180px);
+      }
+    }
+    .about-year-wrap2,
+    .about-counter-wrap {
+      position: relative;
+      animation: none;
+      margin-top: clamp(10px, 2.5vw, 15px);
+      display: block;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      width: 100%;
+      max-width: 100%;
+      min-width: auto;
+    }
+    .about-year-wrap2 {
+      .about-year-grid-wrap {
+        justify-content: flex-start;
+      }
+      .about-year-text {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@include tiny {
+  .about-thumb2 {
+    .about-img-1 {
+      img {
+        height: clamp(160px, 55vw, 190px);
+      }
+    }
+    .about-img-2 {
+      img {
+        height: clamp(140px, 50vw, 170px);
+      }
+    }
+    .about-counter-wrap,
+    .about-year-wrap2 {
+      padding: clamp(10px, 3vw, 12px) clamp(12px, 4vw, 18px);
+    }
+  }
+}
+
+@include xs {
+  .about-feature-wrap {
+    flex-wrap: wrap;
+    padding: clamp(20px, 3vw, 35px) clamp(20px, 3vw, 30px);
+    
+    .about-feature-title {
+      font-size: clamp(18px, 2.5vw, 26px);
+    }
+    
+    .about-feature-text {
+      font-size: clamp(14px, 2vw, 18px);
+    }
+  }
+}
